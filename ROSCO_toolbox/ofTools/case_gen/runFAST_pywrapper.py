@@ -4,7 +4,6 @@ python setting. These functions are constructed to provide a simple interface fo
 programmatically with minimal additional dependencies.
 """
 # Hacky way of doing relative imports
-from __future__ import print_function
 import os, platform
 import multiprocessing as mp
 
