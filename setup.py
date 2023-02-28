@@ -48,6 +48,13 @@ REQUIRED = [
     'pandas'
 ]
 
+# Install these packages by giving the extra arg such as:
+#   pip install -e .[develop]
+#   pip install rosco[develop]
+EXTRAS = {
+    "docs": {"sphinx>4.0.0", "furo"},
+    "develop": {"pytest"},
+}
 
 # For the CMake Extensions
 this_directory = os.path.abspath(os.path.dirname(__file__))
@@ -179,6 +186,7 @@ metadata = dict(
     author_email                  = EMAIL,
     url                           = URL,
     install_requires              = REQUIRED,
+    extras_require                = EXTRAS,
     python_requires               = REQUIRES_PYTHON,
     packages                      = find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     package_data                  = {'': ['*.yaml']},
