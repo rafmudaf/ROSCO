@@ -17,17 +17,12 @@
 # Note: To use the 'upload' functionality of this file, you must:
 #   $ pip install twine
 
-import io
 import os
 import sys
-from shutil import rmtree, copy
-import glob 
+from shutil import rmtree
 import platform
 from setuptools import find_packages, setup, Command, Extension
 from setuptools.command.build_ext import build_ext
-from setuptools.command.install import install as _install
-
-from io import open
 
 # Package meta-data.
 NAME = 'rosco'
@@ -123,7 +118,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 # Import the README and use it as the long-description.
 try:
-    with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+    with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
