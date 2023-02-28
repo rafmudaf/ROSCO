@@ -45,7 +45,6 @@ REQUIRED = [
     'numpy',
     'scipy',
     'pyYAML',
-    'future',
     'pandas'
 ]
 

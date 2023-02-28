@@ -7,13 +7,9 @@ on 11/05/2020
 
 '''
 
-from __future__ import unicode_literals
-from __future__ import absolute_import
 from io import open
 from builtins import range
 from builtins import str
-from future import standard_library
-standard_library.install_aliases()
 from .file import File, WrongFormatError, BrokenFormatError
 import os
 import numpy as np
