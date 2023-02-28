@@ -43,7 +43,6 @@ VERSION = '2.7.0'
 REQUIRED = [
     'matplotlib',
     'numpy',
-    'pytest',
     'scipy',
     'pyYAML',
     'future',
